@@ -9,6 +9,17 @@ Global rules for AI coding agents work.
 - State assumptions explicitly. Surface multiple interpretations rather than picking silently.
 - If a simpler approach exists, say so. Push back when warranted.
 - Don't hide confusion — name what is unclear and ask first.
+-
+
+<!-- context7 -->
+
+Use `ctx7` CLI for current docs on any library/framework/SDK/API/CLI/cloud service, even ones you think you know (training data may be outdated). Prefer over web search for library docs. Skip for refactoring, scratch scripts, business-logic debugging, or general programming concepts.
+
+- Resolve: `npx ctx7@latest library <name> "<question>"` (use official name, e.g. "Next.js") — pick best match by relevance/snippet count/reputation; skip this step only if user gives ID as `/org/project` (add `/version` if version-specific).
+- Fetch: `npx ctx7@latest docs <libraryId> "<question>"` — one call per distinct concept, max 3 commands total, no sensitive data in queries.
+- Answer from the fetched docs; on quota error tell user to run `ctx7@latest login` or set `CONTEXT7_API_KEY` — never silently fall back to training data.
+
+<!-- context7 -->
 
 ## Coding
 
