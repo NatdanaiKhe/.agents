@@ -17,3 +17,12 @@ Thumbs.db
 # Misc
 *.tmp
 *.temp
+
+# In-repo skill alias symlinks (created by scripts/setup-symlinks.* for Codex's
+# flat per-skill layout; platform-specific, never commit)
+skills/create-architecture-documentation
+skills/debug-mantra
+skills/generate-tests
+skills/management-talk
+skills/post-mortem
+skills/scrutinize
